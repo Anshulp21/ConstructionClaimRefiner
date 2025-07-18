@@ -9,14 +9,12 @@ from pydantic import Field
 from dotenv import load_dotenv
 
 load_dotenv()
-
 mistralApiKey = os.getenv("MISTRAL_API_KEY") or "your-api-key-here"
 
 if not mistralApiKey:
     st.error("MISTRAL_API_KEY is missing.")
     st.stop()
 
-# Custom Mistral LLM
 class MistralLLM(LLM):
     apiKey: str = Field(...)
     model: str = Field(default="mistral-tiny")
