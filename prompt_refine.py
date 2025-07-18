@@ -8,13 +8,10 @@ from typing import Optional, List, Any
 from pydantic import Field
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# API Key
 mistralApiKey = os.getenv("MISTRAL_API_KEY") or "your-api-key-here"
 
-# Basic check
 if not mistralApiKey:
     st.error("MISTRAL_API_KEY is missing.")
     st.stop()
@@ -73,7 +70,6 @@ class MistralLLM(LLM):
             "max_tokens": self.maxTokens
         }
 
-# Prompt Template
 systemPromptTemplate = """
 You are an expert construction claims consultant with deep knowledge of construction law, contract administration, and project management.
 
@@ -105,7 +101,6 @@ def createPromptProcessor(llm):
 
     return process
 
-# UI Starts Here
 st.title("🛠️ Construction Claim Prompt Improver")
 
 userPrompt = st.text_area("Enter raw construction prompt:", height=150)
