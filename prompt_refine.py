@@ -98,7 +98,7 @@ def createPromptProcessor(llm):
 
     return process
 
-st.title("🛠️ Construction Claim Prompt Improver")
+st.title("Construction Claim Prompt Improver")
 
 userPrompt = st.text_area("Enter raw construction prompt:", height=150)
 
