@@ -19,7 +19,7 @@ A Streamlit-based application that transforms raw, unstructured construction cla
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ConstructionClaimPromptImprover.git
+git clone https://github.com/Anshulp21/ConstructionClaimRefiner.git
 cd ConstructionClaimPromptImprover
 ```
 
